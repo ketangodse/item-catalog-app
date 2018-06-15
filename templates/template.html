@@ -1,0 +1,14 @@
+<html>
+    <body> 
+        <h1> {{catalog.name}}</h1>
+        {% for i in items %}
+        {{i.name}}
+        </br>
+        {{i.description}}
+        </br>
+        <a href="{{url_for('editCatalogItem', catalogname = catalog.name, itemname = i.name)}}">Edit</a>
+        </br>
+        <a href="{{url_for('deleteCatalogItem', catalogname = catalog.name, itemname = i.name)}}">Edit</a>
+        {% endfor %}
+    </body>
+</html>
